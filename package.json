@@ -1,6 +1,25 @@
 {
+  "name": "employee-tracker",
+  "description": "Employee management system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "inquirer": "^8.2.4",
     "mysql2": "^3.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/amethystlyre/Employee-Tracker.git"
+  },
+  "author": "amethystlyre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amethystlyre/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/amethystlyre/Employee-Tracker#readme"
+  
 }
