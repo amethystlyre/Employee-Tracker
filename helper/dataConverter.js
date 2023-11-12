@@ -24,10 +24,10 @@ const generateRoleTitleList = async function(){
     }
 }
 
-const generateManagerList = async function(){
+const generateFullNamesList = async function(){
 
     try{
-        let data = await new GetEmpData().queryManagersList();
+        let data = await new GetEmpData().queryFullNamesList();
         //console.log(data);
         return data;
     }
@@ -40,4 +40,4 @@ const generateManagerList = async function(){
 
 //generateRoleTitleList();
 
-module.exports = {generateDepNameList,generateRoleTitleList,generateManagerList};
+module.exports = {generateDepNameList,generateRoleTitleList,generateFullNamesList};
