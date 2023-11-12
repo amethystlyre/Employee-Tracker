@@ -3,8 +3,8 @@ const {GetEmpData,GetRoleData,GetDepData} = require("../lib/getData");
 const generateDepNameList = async function(){
 
     try{
-        let data = await new GetDepData().queryDepChoices();
-        console.log(data);
+        let data = await new GetDepData().queryDepNameList();
+        //console.log(data);
         return data;
     }
     catch (e){
@@ -15,16 +15,21 @@ const generateDepNameList = async function(){
 
 const generateRoleTitleList = async function(){
     try{
-        let data = await new GetRoleData().queryAll();
-        let roleTitles = [];
-        data.forEach(element => {
-            let choice = {value:"",name:""}
-            choice.value=element.id;
-            choice.name=element.name;
-            roleTitles.push(choice);
-        });
-        //console.log(roletitle);
-        return roleTitles;
+        let data = await new GetRoleData().queryRoleTitleList();
+        //console.log(data);
+        return data;
+    }
+    catch (e){
+        console.error("err: "+e);
+    }
+}
+
+const generateManagerList = async function(){
+
+    try{
+        let data = await new GetEmpData().queryManagersList();
+        //console.log(data);
+        return data;
     }
     catch (e){
         console.error("err: "+e);
@@ -33,6 +38,6 @@ const generateRoleTitleList = async function(){
 
 //generateDepNameList();
 
+//generateRoleTitleList();
 
-
-module.exports = {generateDepNameList,generateRoleTitleList};
+module.exports = {generateDepNameList,generateRoleTitleList,generateManagerList};

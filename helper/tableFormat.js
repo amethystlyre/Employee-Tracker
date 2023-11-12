@@ -1,5 +1,56 @@
 const { table } = require('table');
 
+const config = {
+  border: {
+    topBody: ``,
+    topJoin: ``,
+    topLeft: ``,
+    topRight: ``,
+
+    bottomBody: ``,
+    bottomJoin: ``,
+    bottomLeft: ``,
+    bottomRight: ``,
+
+    bodyLeft: ``,
+    bodyRight: ``,
+    bodyJoin: ``,
+
+    joinBody: `─`,
+    joinLeft: ``,
+    joinRight: ``,
+    joinJoin: ``
+  }
+};
+
+let convertData = (dataList)=>{
+    let nestList = [];
+    let heading = Object.keys(dataList[0]);
+    nestList[0]=heading;
+    //console.log(heading);
+    dataList.forEach((row) => {
+        nestList.push(Object.values(row));
+    });
+
+    //console.log(nestList);
+    return nestList;
+}
+
+let renderData = (dataList)=>{
+
+  console.log(table(convertData(dataList), config));
+
+}
+
+module.exports = renderData;
+
+  
+ 
+
+
+
+
+ /* Sample input data from MySQL query
 const data = [
         {
           id: 1,
@@ -74,28 +125,4 @@ const data = [
           manager: 'Kim Kardashian'
         }
   ];
-  
-  const config = {
-    border: {
-      topBody: `─`,
-      topJoin: `┬`,
-      topLeft: `┌`,
-      topRight: `┐`,
-  
-      bottomBody: `─`,
-      bottomJoin: `┴`,
-      bottomLeft: `└`,
-      bottomRight: `┘`,
-  
-      bodyLeft: `│`,
-      bodyRight: `│`,
-      bodyJoin: `│`,
-  
-      joinBody: `─`,
-      joinLeft: `├`,
-      joinRight: `┤`,
-      joinJoin: `┼`
-    }
-  };
-  
-  console.log(table(data, config));
+*/  
