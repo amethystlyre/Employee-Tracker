@@ -12,10 +12,10 @@ WHERE department_id = 2;
 
 -- View employees by manager
 
-SELECT *
+SELECT Team_Member.first_name,Team_Member.last_name, concat(Manager.first_name,' ', Manager.last_name) AS Manager
 FROM employee AS Team_Member
 LEFT JOIN employee AS Manager ON Team_Member.manager_id = Manager.id
-WHERE Manager.id = 1;
+WHERE Team_Member.manager_id = 1;
 
 -- View all departments
 SELECT *
@@ -31,8 +31,9 @@ GROUP BY department.name;
 
 -- View all roles
 
-SELECT *
-FROM role;
+SELECT role.title, department.name, role.salary
+FROM role
+LEFT JOIN department ON role.department_id = department.id;
 
 -- Add new employee
 
@@ -74,3 +75,8 @@ DELETE
 FROM department
 WHERE name = "New Department";
 
+SELECT Team_Member.first_name, Team_Member.last_name, role.title, role.salary, department.name, concat(Manager.first_name,' ', Manager.last_name) AS Manager 
+FROM employee AS Team_Member 
+LEFT JOIN role ON Team_Member.role_id = role.id 
+LEFT JOIN department ON role.department_id = department.id 
+LEFT JOIN employee AS Manager ON Team_Member.manager_id = Manager.id;

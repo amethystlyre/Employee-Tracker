@@ -3,13 +3,14 @@
   "description": "Employee management system",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "figlet": "^1.7.0",
     "inquirer": "^8.2.4",
-    "mysql2": "^3.6.3"
+    "mysql2": "^3.6.3",
+    "table": "^6.8.1"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,4 @@
     "url": "https://github.com/amethystlyre/Employee-Tracker/issues"
   },
   "homepage": "https://github.com/amethystlyre/Employee-Tracker#readme"
-  
 }
