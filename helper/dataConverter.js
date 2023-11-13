@@ -1,38 +1,41 @@
-const {GetEmpData,GetRoleData,GetDepData} = require("../lib/getData");
+const { GetEmpData, GetRoleData, GetDepData } = require("../lib/getData");
 
-const generateDepNameList = async function(){
+//Helper function to generate a list of department names and values(ID) as choices for user to select
+const generateDepNameList = async function () {
 
-    try{
+    try {
         let data = await new GetDepData().queryDepNameList();
         //console.log(data);
         return data;
     }
-    catch (e){
-        console.error("err: "+e);
+    catch (e) {
+        console.error("err: " + e);
     }
 }
 
-
-const generateRoleTitleList = async function(){
-    try{
+//Helper function to generate a list of role titles and values(ID) as choices for user to select
+const generateRoleTitleList = async function () {
+    try {
         let data = await new GetRoleData().queryRoleTitleList();
         //console.log(data);
         return data;
     }
-    catch (e){
-        console.error("err: "+e);
+    catch (e) {
+        console.error("err: " + e);
     }
 }
 
-const generateFullNamesList = async function(){
 
-    try{
+//Helper function to generate a list of employee full names and values(ID) as choices for user to select
+const generateFullNamesList = async function () {
+
+    try {
         let data = await new GetEmpData().queryFullNamesList();
         //console.log(data);
         return data;
     }
-    catch (e){
-        console.error("err: "+e);
+    catch (e) {
+        console.error("err: " + e);
     }
 }
 
@@ -40,4 +43,4 @@ const generateFullNamesList = async function(){
 
 //generateRoleTitleList();
 
-module.exports = {generateDepNameList,generateRoleTitleList,generateFullNamesList};
+module.exports = { generateDepNameList, generateRoleTitleList, generateFullNamesList };
