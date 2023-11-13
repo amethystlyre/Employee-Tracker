@@ -24,7 +24,7 @@ A content management system that can be used to manage a company's employee data
 ![screenshot](./images/Screenshot2.png)
 5. Run ```mysql -u root -p``` command to connect to your local database and run ```source db/schema.sql``` to setup the schema for the database.
 6. (Optional) Add sample data to your DB by running ```source db/seeds.sql```.
-7. Go to lib/ Update the database connection password for connecting to your local server.
+7. Navigate to the lib/connectDB.js file and update the username and password strings for connecting to your own local server.
 
 ## Usage
     
