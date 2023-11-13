@@ -22,9 +22,9 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Matt", "Damon", 8,NULL),
        ("Cameron", "Diaz", 1,1),
        ("Will", "Smith", 2,2),
-       ("Johnny", "Depp", 5,1),
-       ("Dwayne", "Johnson", 3,4),
-       ("Kim", "Kardashian", 7,1),
-       ("Vin", "Diesel", 4,2),
-       ("Brad", "Pitt", 4,2),
-       ("Anne", "Hathaway", 6,6);
+       ("Johnny", "Depp", 7,1),
+       ("Dwayne", "Johnson", 3,1),
+       ("Kim", "Kardashian", 5,1),
+       ("Vin", "Diesel", 6,4),
+       ("Brad", "Pitt", 6,4),
+       ("Anne", "Hathaway", 4,5);

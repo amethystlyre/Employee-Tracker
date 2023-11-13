@@ -18,11 +18,13 @@ A content management system that can be used to manage a company's employee data
     
 1. Clone this Git repo to your local directory.<br>
 ![screenshot](./images/Screenshot1.png)<br>
-2. Open the repo folder in VS Studio or your preferred code editor.<br>
-3. Open the Integrated Terminal and enter command `npm install` to download the required Inquirer package.<br>
+2. If you haven't already installed MySQL Server, you may need to [download](https://dev.mysql.com/) the relevant version and install this on your local machine first.
+3. Open the repo folder in VS Studio or your preferred code editor.<br>
+4. Open the Integrated Terminal and enter command `npm install` to download the required Inquirer package.<br>
 ![screenshot](./images/Screenshot2.png)
-4. Run ```mysql -u root -p``` command to connect to your local database and run ```source db/schema.sql``` to setup the schema for the database.
-5. (Optional) Add sample data to your DB by running ```source db/seeds.sql```
+5. Run ```mysql -u root -p``` command to connect to your local database and run ```source db/schema.sql``` to setup the schema for the database.
+6. (Optional) Add sample data to your DB by running ```source db/seeds.sql```.
+7. Update the database connection password for connecting to your local server.
 
 ## Usage
     

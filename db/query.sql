@@ -2,9 +2,19 @@
 
 SELECT * FROM employee;
 
+
+SELECT Team_Member.id,Team_Member.first_name, Team_Member.last_name, 
+role.title, role.salary, 
+department.name AS department, 
+concat(Manager.first_name,' ', Manager.last_name) AS manager 
+FROM employee AS Team_Member 
+LEFT JOIN role ON Team_Member.role_id = role.id 
+LEFT JOIN department ON role.department_id = department.id 
+LEFT JOIN employee AS Manager ON Team_Member.manager_id = Manager.id;
+
 -- View employees by department
 
-SELECT *
+SELECT employee.id,employee.first_name, employee.last_name, role.title, department.name AS department
 FROM employee
 LEFT JOIN role ON employee.role_id = role.id
 LEFT JOIN department ON role.department_id = department.id
@@ -22,11 +32,11 @@ SELECT *
 FROM department;
 
 -- View all department budget
-SELECT department.name,SUM(role.salary)
+SELECT department.name As Department,SUM(role.salary) AS 'Budget utilized'
 FROM employee
 LEFT JOIN role ON employee.role_id = role.id
 LEFT JOIN department ON role.department_id = department.id
-GROUP BY department.name;
+WHERE department.id = 3;
 
 
 -- View all roles
@@ -61,22 +71,18 @@ WHERE employee.id = 1;
 
 DELETE
 FROM employee
-WHERE first_name = "New";
+WHERE employee.id = ;
 
 -- Delete role
 
 DELETE
 FROM role
-WHERE title = "New role";
+WHERE role.id = ;
 
 -- Delete department
 
 DELETE
 FROM department
-WHERE name = "New Department";
+WHERE department.id = ;
 
-SELECT Team_Member.first_name, Team_Member.last_name, role.title, role.salary, department.name, concat(Manager.first_name,' ', Manager.last_name) AS Manager 
-FROM employee AS Team_Member 
-LEFT JOIN role ON Team_Member.role_id = role.id 
-LEFT JOIN department ON role.department_id = department.id 
-LEFT JOIN employee AS Manager ON Team_Member.manager_id = Manager.id;
+
