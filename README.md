@@ -28,7 +28,7 @@ A content management system that can be used to manage a company's employee data
 
 ## Usage
     
-Once the dependencies and database schema have been installed and setup, you can invoke the application with command `node index.js` in the terminal. Choose an action from the main menu and then follow any prompts to make changes to the database. For more detailed instructions, please watch the [walkthrough video](https:..).<br>
+Once the dependencies and database schema have been installed and setup, you can invoke the application with command `node index.js` in the terminal. Choose an action from the main menu and then follow any prompts to make changes to the database. For more detailed instructions, please watch the [walkthrough video](https://drive.google.com/file/d/1gMW8KVPM3I_1IaxkgsUjfrxmKpLxSlaM/view?usp=drive_link).<br>
 
 ![screenshot](./images/Screenshot3.png)
 
